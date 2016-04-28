@@ -1,0 +1,24 @@
+{
+  "name": "node-log-pwf",
+  "version": "0.0.1-beta",
+  "description": "Present working file in console.log()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfilyev/node-log-pwf.git"
+  },
+  "keywords": [
+    "node",
+    "log",
+    "file"
+  ],
+  "author": "perfilyevhead@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perfilyev/node-log-pwf/issues"
+  },
+  "homepage": "https://github.com/perfilyev/node-log-pwf#readme"
+}
