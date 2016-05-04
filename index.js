@@ -1,6 +1,6 @@
-var log = console.log;
+var log = console.Console.prototype.log;
 
-console.log = function() {
+var pwf = function() {
   var prepareStackTrace = Error.prepareStackTrace;
   Error.prepareStackTrace = function(_, stack){ return stack; };
   var err = new Error;
@@ -9,8 +9,16 @@ console.log = function() {
   Error.prepareStackTrace = prepareStackTrace;
   
   var args = Array.prototype.slice.call(arguments);
-  args.unshift('\033[91m' + stack[0].getFileName() + ':' + stack[0].getLineNumber() + '\033[0m');
+  var pwfLine = stack[0].getFileName() + ':' + stack[0].getLineNumber();
+  if (this._stdout === process.stdout) {
+    pwfLine = '\033[91m' + pwfLine + '\033[0m';
+  }
+  args.unshift(pwfLine);
   return log.apply(this,args);
 };
+
+console.Console.prototype.log = pwf;
+
+console.log = pwf;
 
 module.exports = console;
