@@ -1,6 +1,6 @@
 {
   "name": "node-log-pwf",
-  "version": "0.0.4-beta",
+  "version": "0.0.5-beta",
   "description": "Present working file in console.log()",
   "main": "index.js",
   "scripts": {
