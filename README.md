@@ -9,3 +9,7 @@ If you see a log of your application and ask yourself, "What the hell?", then th
 just `require('node-log-pwf')` and see the log.
 
 ![Preview](https://raw.githubusercontent.com/perfilyev/raw/master/pwf.png)
+
+`console.warn()` and `console.error()` are also supported
+
+![Types](https://raw.githubusercontent.com/perfilyev/raw/master/pwf-log-types.png)
